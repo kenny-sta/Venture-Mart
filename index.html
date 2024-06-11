@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventures</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js.js" defer></script>
+    <link rel="shortcut icon" href="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/e4c40893-bfa7-4d47-97e8-9c08fc826892/979fc8f6-c026-4ec9-a9fa-26c6fa8e8a52.png" type="image/x-icon">
+</head>
+<body>
+    <div class="logo">
+        <h1>VentureMart</h1>
+    </div>
+    <header>
+        <h1>Welcome to VentureMart</h1>
+        <p>Discover the latest in electronics for every venture</p>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Electronics</a></li>
+                <li><a href="appliance.html">Home Appliances</a></li>
+                <li><a href="fashion.html">Fashion and Accessories</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="search-bar">
+        <div class="search-input-container">
+            <input type="search" placeholder="Search products" id="searchInput">
+    <button onclick="search()">Search</button>
+</div>
+</div>
+
+<div class="search-results">
+<!-- Search results here -->
+<div class="product-list" id="searchResults">
+    <!-- Product items here -->
+</div>
+</div>
+
+<div id="notFound" style="display: none;">
+<p>No products found.</p>
+</div>
+
+
+    <div class="product-list">
+        <div class="product-item">
+            <img src="Images/1 (6).jpg" alt="Router">
+            <h2>Router</h2>
+            <p>Wireless internet router for high-speed connectivity</p>
+            <p>Nigerian Price: NGN 20,000</p>
+            <button class="buy-btn" onclick="buyNow(this)">Buy Now</button>
+        </div>
+        <div class="product-item">
+            <img src="Images/1 (5).jpg" alt="Dual-band Router">
+            <h2>Dual-band Router</h2>
+            <p>Router for strong and reliable connections</p>
+            <p>Nigerian Price: NGN 25,000</p>
+          <button class="buy-btn" onclick="buyNow(this)">Buy Now</button>
+        </div>
+        <div class="product-item">
+            <img src="Images/300_400_copy_5.jpg" alt="Laptop">
+            <h2>Laptop</h2>
+            <p>High-performance laptop for work and entertainment</p>
+            <p>Nigerian Price: NGN 130,000</p>
+          <button class="buy-btn" onclick="buyNow(this)">Buy Now</button>
+        </div>
+        <div class="product-item">
+            <img src="Images/daniel-romero-TpXoTb1uR5A-unsplash.jpg" alt="Smartphone">
+            <h2>Smartphone</h2>
+            <p>Latest smartphone with advanced features</p>
+            <p>Nigerian Price: NGN 65,000</p>
+          <button class="buy-btn" onclick="buyNow(this)">Buy Now</button>
+        </div>
+        <div class="product-item">
+            <img src="Images/nicolas-j-leclercq-qDLLP0yP7FU-unsplash.jpg" alt="Television">
+            <h2>Television</h2>
+            <p>High-definition LED TV for immersive viewing experience</p>
+            <p>Nigerian Price: NGN 155,000</p>
+          <button class="buy-btn" onclick="buyNow(this)">Buy Now</button>
+        </div>
+        <!-- Add more electronic products here -->
+        <div class="product-item">
+            <img src="Images/Artboard_1_copy_7.png" alt="Headphones">
+            <h2>Headphones</h2>
+            <p>Wireless headphones with noise-cancellation feature</p>
+            <p>Nigerian Price: NGN 30,000</p>
+          <button class="buy-btn" onclick="buyNow(this)">Buy Now</button>
+        </div>
+        <div class="product-item">
+            <img src="Images/Smart watch.jpg" alt="Smartwatch">
+            <h2>Smartwatch</h2>
+            <p>Smartwatch with health and fitness tracking features</p>
+            <p>Nigerian Price: NGN 40,000</p>
+          <button class="buy-btn" onclick="buyNow(this)">Buy Now</button>
+        </div>
+        <div class="product-item">
+            <img src="Images/speaker system.jpg" alt="Speaker System">
+            <h2>Speaker System</h2>
+            <p>Surround sound speaker system for home entertainment</p>
+            <p>Nigerian Price: NGN 60,000</p>
+          <button class="buy-btn" onclick="buyNow(this)">Buy Now</button>
+        </div>
+        <div class="product-item">
+            <img src="Images/camera.jpg" alt="Action Camera">
+            <h2>Action Camera</h2>
+            <p>Waterproof action camera for capturing adventures</p>
+            <p>Nigerian Price: NGN 35,000</p>
+          <button class="buy-btn" onclick="buyNow(this)">Buy Now</button>
+        </div>
+        <div class="product-item">
+            <img src="Images/minh-pham-HI6gy-p-WBI-unsplash.jpg" alt="VR Headset">
+            <h2>VR Headset</h2>
+            <p>Immerse yourself in virtual reality experiences</p>
+            <p>Nigerian Price: NGN 45,000</p>
+            <button class="buy-btn" onclick="buyNow(this)">Buy Now</button>
+        </div>
+        <div class="product-item">
+            <img src="Images/mahrous-houses-5AoOejjRUrA-unsplash.jpg" alt="Printer">
+            <h2>Printer</h2>
+            <p>High-quality printer for professional documents</p>
+            <p>Nigerian Price: NGN 50,000</p>
+            <button class="buy-btn" onclick="buyNow(this)">Buy Now</button>
+        </div>
+        <div class="product-item">
+            <img src="Images/cafer-mert-ceyhan-LAY19dUD_ro-unsplash.jpg" alt="Monitor">
+            <h2>Monitor</h2>
+            <p>High-resolution monitor for crisp visuals</p>
+            <p>Nigerian Price: NGN 25,000</p>
+            <button class="buy-btn" onclick="buyNow(this)">Buy Now</button>
+        </div>
+    </div>
+    <script>
+       
+    </script>
+</body>
+</html>
