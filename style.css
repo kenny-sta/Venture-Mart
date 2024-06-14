@@ -124,111 +124,54 @@ header {
     background-color: #218838;
 }
 
-@media only screen and (max-width: 600px) {
-    /* Resetting default margin and padding */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    /* Body styles */
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f8f8f8;
-        color: #333;
-        line-height: 1.6;
-    }
-
+/* Phone screen styles */
+@media only screen and (max-width: 480px) {
     /* Logo styles */
-    .logo {
-        text-align: center;
-        padding: 20px 0;
-    }
-
     .logo h1 {
-        font-size: 24px; /* Adjust font size for smaller screens */
+      font-size: 30px; /* Increase font size for better readability */
     }
-
+  
     /* Header styles */
     header {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px; /* Reduce padding for smaller screens */
+      padding: 5px; /* Reduce padding for smaller screens */
     }
-
+  
     header h1 {
-        margin-bottom: 5px; /* Adjust margin for smaller screens */
+      margin-bottom: 0; /* Remove margin for smaller screens */
     }
-
+  
     header p {
-        font-size: 16px; /* Adjust font size for smaller screens */
-        margin-bottom: 10px;
+      font-size: 18px; /* Increase font size for better readability */
+      margin-bottom: 5px; /* Reduce margin for smaller screens */
     }
-
+  
     /* Navigation styles */
+    .navigation {
+      flex-direction: column;
+      align-items: center;
+    }
+  
     .navigation ul {
-        list-style: none;
-        padding: 0;
-        text-align: center;
+      padding: 0;
+      list-style: none;
     }
-
-    .navigation ul li {
-        display: inline;
-        margin-right: 10px; /* Reduce margin for smaller screens */
+  
+    .navigation li {
+      margin-bottom: 15px; /* Increase spacing between items */
     }
-
-    .navigation ul li a {
-        color: #fff;
-        text-decoration: none;
+  
+    .navigation a {
+      font-size: 18px; /* Increase font size for better readability */
     }
-
+  
     /* Search bar styles */
-    .search-bar {
-        background-color: #fff;
-        padding: 10px; /* Reduce padding for smaller screens */
-        text-align: center;
-    }
-
     .search-input-container input[type="search"] {
-        padding: 5px; /* Reduce padding for smaller screens */
-        width: 60%; /* Adjust width for smaller screens */
+      padding: 5px; /* Reduce padding for smaller screens */
+      width: 80%; /* Adjust width for smaller screens */
     }
-
+  
     .search-input-container button {
-        padding: 5px 10px; /* Reduce padding for smaller screens */
-        font-size: 12px; /* Adjust font size for smaller screens */
+      padding: 5px 10px; /* Reduce padding for smaller screens */
+      font-size: 14px; /* Adjust font size for smaller screens */
     }
-
-    /* Product list styles */
-    .product-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid layout for smaller screens */
-        grid-gap: 10px; /* Reduce grid gap for smaller screens */
-        padding: 10px; /* Reduce padding for smaller screens */
-    }
-
-    .product-item {
-        padding: 10px; /* Reduce padding for smaller screens */
-    }
-
-    .product-item img {
-        margin-bottom: 5px; /* Reduce margin for smaller screens */
-    }
-
-    .product-item h2 {
-        font-size: 18px; /* Adjust font size for smaller screens */
-        margin-bottom: 5px; /* Reduce margin for smaller screens */
-    }
-
-    .product-item p {
-        font-size: 14px; /* Adjust font size for smaller screens */
-        margin-bottom: 5px; /* Reduce margin for smaller screens */
-    }
-
-    .product-item button.buy-btn {
-        padding: 5px 10px; /* Reduce padding for smaller screens */
-        font-size: 12px; /* Adjust font size for smaller screens */
-    }
-}
+  }
