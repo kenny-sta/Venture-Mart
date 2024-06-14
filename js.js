@@ -1,28 +1,31 @@
-function search() {
-    var input, filter, productItems, i, txtValue;
-    input = document.getElementById('searchInput');
-    filter = input.value.trim().toLowerCase(); // Convert search term to lowercase and trim whitespace
-    productItems = document.querySelectorAll('.product-item');
-    var found = false;
+// JavaScript for search functionality
 
-    for (i = 0; i < productItems.length; i++) {
-        var productItem = productItems[i];
-        txtValue = productItem.textContent || productItem.innerText;
-        txtValue = txtValue.trim().toLowerCase(); // Convert product text to lowercase and trim whitespace
-        if (txtValue.includes(filter)) { // Check if the product text contains the search term
-            productItem.style.display = ""; // Show the product item
+function search() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const productList = document.getElementById('searchResults');
+    const notFound = document.getElementById('notFound');
+    const products = document.querySelectorAll('.product-item');
+    
+    productList.innerHTML = ''; // Clear previous results
+    let found = false;
+
+    products.forEach(product => {
+        const productName = product.querySelector('h2').textContent.toLowerCase();
+        if (productName.includes(input)) {
+            productList.appendChild(product.cloneNode(true));
             found = true;
-        } else {
-            productItem.style.display = "none"; // Hide the product item if it doesn't match
         }
-    }
+    });
 
     if (!found) {
-        document.getElementById('notFound').style.display = "block"; // Display "Not Found" message if no matching products found
+        notFound.style.display = 'block';
     } else {
-        document.getElementById('notFound').style.display = "none"; // Hide "Not Found" message if matching products found
+        notFound.style.display = 'none';
     }
 }
+
+
+
 
 // Add event listener to trigger search function when Enter key is pressed
 document.getElementById('searchInput').addEventListener('keyup', function(event) {
